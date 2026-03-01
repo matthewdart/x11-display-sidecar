@@ -1,0 +1,12 @@
+services:
+  x11-display:
+    image: ghcr.io/matthewdart/x11-display-sidecar:latest
+    container_name: x11-display
+    restart: unless-stopped
+    ports:
+      - "6080:6080"
+    volumes:
+      - x11-socket:/tmp/.X11-unix
+
+volumes:
+  x11-socket:

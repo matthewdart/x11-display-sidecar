@@ -1,0 +1,3 @@
+# CI/CD override template — secrets injected via envsubst
+# Deployed as docker-compose.override.yml (never committed with values)
+services: {}

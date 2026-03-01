@@ -1,0 +1,17 @@
+name: Build & Push
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    uses: matthewdart/toolbox/.github/workflows/build-arm-image.yml@main
+    with:
+      image_name: x11-display-sidecar
+    secrets: inherit
